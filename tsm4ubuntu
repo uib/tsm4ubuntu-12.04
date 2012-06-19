@@ -14,7 +14,7 @@ define_variable()
 {   
     # TSM_ROOT defines the path where the rpms are. tsm4ubuntu will work
     # in this directory
-    TSM_ROOT=/tmp
+    TSM_ROOT=/tmp/tsm
 
     # the name of the package will be
     # <short_org>-<TSM_NAME>-{ba,api..}_<TSM_VER>-<DDEB_VER>
