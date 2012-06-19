@@ -14,20 +14,20 @@ define_variable()
 {   
     # TSM_ROOT defines the path where the rpms are. tsm4ubuntu will work
     # in this directory
-    TSM_ROOT=~/ubuntu/tsm/6.3.0.0
+    TSM_ROOT=/tmp
 
     # the name of the package will be
     # <short_org>-<TSM_NAME>-{ba,api..}_<TSM_VER>-<DDEB_VER>
     # so for the current case: unige-tsm-ba_6.3.0-2.deb
-    TSM_NAME=TSM ; # usually it is "TSM"
-    TSM_VER=6.3.0
-    SHORT_ORG=UniGE ; # a short name of your organisation
+    TSM_NAME=tsm ; # usually it is "TSM"
+    TSM_VER=6.3.0.5
+    SHORT_ORG=uib ; # a short name of your organisation
 
     # where the tsm files will be installed without the first and the last "/"
-    OPT_PATH='opt/uau/tsm' ; # usually it is "opt/tivoli/tsm"
+    OPT_PATH='opt/tivoli/tsm' ; # usually it is "opt/tivoli/tsm"
 
     # email of the packager of these
-    EMAIL_MAINTAINER='Cedric BRINER <Cedric.Briner@UniGE.ch>'
+    EMAIL_MAINTAINER='Unix klientdrift'
     
     #
     # this variable define the name of the rpm for each element 
@@ -43,9 +43,9 @@ define_variable()
     # you should be "0" for your first time.
     unset ddeb_ver
     declare -Ag ddeb_ver
-    ddeb_ver["crypt"]="1" 
+    ddeb_ver["crypt"]="1"
     ddeb_ver["ssl"]="1"
-    ddeb_ver["ba"]="3"
+    ddeb_ver["ba"]="1"
     ddeb_ver["api"]="1"
     ddeb_ver["integration"]="3" ; # this is only used at the University of Geneva
 }
